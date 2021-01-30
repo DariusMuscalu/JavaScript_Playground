@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr-JavaScript</title>
+</head>
+<body>
+    <h1>I'm Mr. JavaScript</h1>
+    <a href="#" id="hey">Hey JavaScript, how ya feeling?</a>
+    <br>
+    <a href="#" class="reset">Reset</a>
+    <script>
+        var a = document.querySelector("#hey");
+        a.addEventListener('click',function(){
+            
+            var h1 = document.querySelector("h1");
+            h1.innerHTML = "I'm alive!";
+            console.log(h1);
+
+        });
+
+        // Instead of .querySelector we can use .getElementById for taking a id or .getElementsByClassName for classes, but for classes it will get all of them from te html document. If we want to select the first  class for example we use the Array style for selecting the first item i.e. a[0]
+        var reset = document.querySelector(".reset");
+        reset.addEventListener('click', function(){
+
+            var h1 = document.querySelector("h1");
+            h1.innerHTML = "I'm Mr. Javascript";
+            console.log(h1);
+        });
+    </script>
+</body>
+</html>
